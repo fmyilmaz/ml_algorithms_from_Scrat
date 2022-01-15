@@ -1,7 +1,6 @@
 import numpy as np
 from collections import Counter
 
-from knntest import X_train
 
 def euclidean_distance(x1, x2):
     return np.sqrt(np.sum((x1 - x2)**2))
