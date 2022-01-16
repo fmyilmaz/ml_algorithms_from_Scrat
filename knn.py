@@ -27,7 +27,7 @@ class KNN:
         distances = [euclidean_distance(x, x_train) for x_train in self.X_train]
 
         # get k nearest samples, labels
-        k_indices = np.argsort(distances)[:self.k]
+        k_indices = np.argsort(distances)[: self.k]
         k_nearest_labels = [self.y_train[i] for i in k_indices]
         # Majority vote, most common class labels
         most_common = Counter(k_nearest_labels).most_common(1) # gets most common fist argument
